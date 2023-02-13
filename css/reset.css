@@ -4,4 +4,6 @@
 
 body {
   margin: 0;
+  font-family: sans-serif;
+  background-color: rgb(240, 240, 240);
 }
