@@ -61,3 +61,19 @@ function toggleNoEntries() {
   }
 }
 toggleNoEntries();
+
+var $entryForm = document.querySelector('.entry-form');
+var $entries = document.querySelector('.entries');
+function viewSwap(view) {
+  if (view === 'entries') {
+    $entryForm.className = 'entry-form hidden';
+    $entries.className = 'entries';
+  }
+  if (view === 'entry-form') {
+    $entryForm.className = 'entry-form';
+    $entries.className = 'entries hidden';
+  }
+  data.view = view;
+}
+
+viewSwap();
