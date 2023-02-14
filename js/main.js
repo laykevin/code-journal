@@ -82,3 +82,8 @@ $navEntries.addEventListener('click', function (event) {
   viewSwap('entries');
 });
 // viewSwap();
+var $newEntry = document.querySelector('.new-entry');
+$newEntry.addEventListener('click', function (event) {
+  event.preventDefault();
+  viewSwap('entry-form');
+});

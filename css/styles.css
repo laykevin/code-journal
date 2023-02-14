@@ -59,7 +59,7 @@ ul {
   text-align: center;
 }
 
-a {
+.nav-entries {
   color: white;
 }
 
@@ -67,4 +67,28 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.row-entries {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  color: white;
+  background-color: rgb(86, 43, 129);
+  height: 60%;
+  border-radius: 2px;
+}
+
+.new-entry {
+  background-color: rgb(86, 43, 129);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: none;
 }
