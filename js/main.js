@@ -76,4 +76,9 @@ function viewSwap(view) {
   data.view = view;
 }
 
-viewSwap();
+var $navEntries = document.querySelector('.nav-entries');
+$navEntries.addEventListener('click', function (event) {
+  event.preventDefault();
+  viewSwap('entries');
+});
+// viewSwap();

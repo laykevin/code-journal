@@ -58,3 +58,13 @@ ul {
 .no-entries {
   text-align: center;
 }
+
+a {
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
