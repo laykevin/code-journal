@@ -22,3 +22,26 @@ function hitSubmit(event) {
   $entryImage.setAttribute('src', 'images/placeholder-image-square.jpg');
   $form.reset();
 }
+
+function renderEntry(entry) {
+  var $renderedEntry = document.createElement('li');
+  $renderedEntry.className = 'row';
+  var $columnHalfDIV = document.createElement('div');
+  $columnHalfDIV.className = 'column-half';
+  $renderedEntry.appendChild($columnHalfDIV);
+  var $picture = document.createElement('img');
+  $picture.setAttribute('src', entry.photoURL);
+  $columnHalfDIV.appendChild($picture);
+  var $textDIV = document.createElement('div');
+  $textDIV.className = 'column-half';
+  $renderedEntry.appendChild($textDIV);
+  var $title = document.createElement('h3');
+  $title.textContent = entry.title;
+  $textDIV.appendChild($title);
+  var $notes = document.createElement('p');
+  $notes.textContent = entry.notes;
+  $textDIV.appendChild($notes);
+  return $renderedEntry;
+}
+
+renderEntry();
