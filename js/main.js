@@ -51,3 +51,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
     $list.appendChild(renderEntry(data.entries[i]));
   }
 });
+
+var $noEntries = document.querySelector('no-entries');
+function toggleNoEntries() {
+  if ($noEntries.className === 'no-entries') {
+    $noEntries.className = 'no-entries hidden';
+  } else {
+    $noEntries.className = 'no-entries';
+  }
+}
+toggleNoEntries();
