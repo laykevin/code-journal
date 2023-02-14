@@ -49,3 +49,8 @@ label {
 .right-side {
   text-align: right;
 }
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
