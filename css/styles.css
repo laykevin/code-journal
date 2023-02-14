@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+  background-color: rgb(240, 240, 240);
+}
+
+img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 5%;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 2% 0 7%;
+  border-radius: 5px;
+  padding: 2% 0;
+  border-color: rgb(182, 182, 182);
+  border-width: 1px;
+  resize: none;
+}
+
+header {
+  background-color: rgb(86, 43, 129);
+}
+
+.purp-head {
+  color: white;
+  font-weight: lighter;
+  padding: 2%;
+  margin: 0;
+}
+
+h2 {
+  margin: 2% 2% 4%;
+}
+
+label {
+  font-weight: bold;
+}
+
+.submit-button {
+  background-color: rgb(86, 43, 129);
+  color: white;
+  width: 5rem;
+  padding: 1%;
+}
+
+.right-side {
+  text-align: right;
+}
