@@ -69,7 +69,6 @@ function toggleNoEntries() {
     $noEntries.className = 'no-entries';
   }
 }
-// toggleNoEntries();
 
 var $entryForm = document.querySelector('.entry-form');
 var $entries = document.querySelector('.entries');
