@@ -49,7 +49,6 @@ function renderEntry(entry) {
   return $renderedEntry;
 }
 
-// renderEntry();
 var $list = document.querySelector('ul');
 document.addEventListener('DOMContentLoaded', function (event) {
   for (var i = 0; i < data.entries.length; i++) {
@@ -89,7 +88,7 @@ $navEntries.addEventListener('click', function (event) {
   event.preventDefault();
   viewSwap('entries');
 });
-// viewSwap();
+
 var $newEntry = document.querySelector('.new-entry');
 $newEntry.addEventListener('click', function (event) {
   event.preventDefault();
