@@ -31,6 +31,7 @@ function hitSubmit(event) {
 function renderEntry(entry) {
   var $renderedEntry = document.createElement('li');
   $renderedEntry.className = 'row';
+  $renderedEntry.setAttribute('data-entry-id', entry.entryId);
   var $columnHalfDIV = document.createElement('div');
   $columnHalfDIV.className = 'column-half';
   $renderedEntry.appendChild($columnHalfDIV);
@@ -43,6 +44,9 @@ function renderEntry(entry) {
   var $title = document.createElement('h3');
   $title.textContent = entry.title;
   $textDIV.appendChild($title);
+  var $pencil = document.createElement('i');
+  $pencil.className = 'fa fa-pencil';
+  $title.appendChild($pencil);
   var $notes = document.createElement('p');
   $notes.textContent = entry.notes;
   $textDIV.appendChild($notes);
