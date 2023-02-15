@@ -49,3 +49,39 @@ label {
 .right-side {
   text-align: right;
 }
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.no-entries {
+  text-align: center;
+}
+
+.nav-entries {
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-entries {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-entry {
+  background-color: rgb(86, 43, 129);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: none;
+}
