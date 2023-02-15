@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     $list.appendChild(renderEntry(data.entries[i]));
   }
   viewSwap(data.view);
-  if ($list.children.length > 1) {
+  if ($list.children.length > 0) {
     toggleNoEntries();
   }
 });
