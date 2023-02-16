@@ -85,3 +85,13 @@ ul {
 a {
   text-decoration: none;
 }
+
+.fa-pencil {
+  color: rgb(86, 43, 129);
+  float: right;
+}
+
+input:focus,
+textarea:focus {
+  outline-color: rgb(86, 43, 129);
+}
