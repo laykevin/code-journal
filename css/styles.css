@@ -44,10 +44,16 @@ label {
   color: white;
   width: 5rem;
   padding: 1%;
+  cursor: pointer;
+  margin: auto 0;
 }
 
 .right-side {
-  text-align: right;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 ul {
@@ -84,6 +90,7 @@ ul {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .fa-pencil {
@@ -94,4 +101,9 @@ a {
 input:focus,
 textarea:focus {
   outline-color: rgb(86, 43, 129);
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }

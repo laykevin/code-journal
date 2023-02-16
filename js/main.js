@@ -44,6 +44,7 @@ function hitSubmit(event) {
   $entryImage.setAttribute('src', 'images/placeholder-image-square.jpg');
   $form.reset();
   viewSwap('entries');
+  $deleteButton.className = 'hidden';
 }
 
 function renderEntry(entry) {
@@ -117,6 +118,7 @@ $newEntry.addEventListener('click', function (event) {
   viewSwap('entry-form');
 });
 
+var $deleteButton = document.querySelector('#delete-button');
 $list.addEventListener('click', function (event) {
   if (event.target.tagName === 'I') {
     viewSwap('entry-form');
@@ -130,5 +132,6 @@ $list.addEventListener('click', function (event) {
     $entryImage.setAttribute('src', $inputURL.value);
     $inputNotes.value = data.editing.notes;
     document.querySelector('h2').textContent = 'Edit Entry';
+    $deleteButton.className = '';
   }
 });
