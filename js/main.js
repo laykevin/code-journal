@@ -141,7 +141,6 @@ function modal(event) {
   event.preventDefault();
   $modal.className = '';
 }
-
 var $cancelButton = document.querySelector('#cancel-button');
 $cancelButton.addEventListener('click', function (event) {
   $modal.className = 'hidden';
