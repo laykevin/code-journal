@@ -13,19 +13,37 @@ $form.addEventListener('submit', hitSubmit);
 function hitSubmit(event) {
   event.preventDefault();
   var userValues = {};
-  userValues.title = $inputTitle.value;
-  userValues.photoURL = $inputURL.value;
-  userValues.notes = $inputNotes.value;
-  userValues.entryId = data.nextEntryId;
-  data.nextEntryId++;
-  data.entries.unshift(userValues);
+  if (data.editing === null) {
+    userValues.title = $inputTitle.value;
+    userValues.photoURL = $inputURL.value;
+    userValues.notes = $inputNotes.value;
+    userValues.entryId = data.nextEntryId;
+    data.nextEntryId++;
+    data.entries.unshift(userValues);
+    $list.prepend(renderEntry(userValues));
+    if ($list.children.length === 1) {
+      toggleNoEntries();
+    }
+  }
+  if (data.editing !== null) {
+    userValues.entryId = data.editing.entryId;
+    userValues.title = $inputTitle.value;
+    userValues.photoURL = $inputURL.value;
+    userValues.notes = $inputNotes.value;
+    for (var k = 0; k < data.entries.length; k++) {
+      if (data.entries[k].entryId === data.editing.entryId) {
+        data.entries.splice(k, 1, userValues);
+      }
+    }
+    var edited = renderEntry(userValues);
+    var $needReplace = document.querySelector('[data-entry-id="' + data.editing.entryId.toString() + '"]');
+    $needReplace.replaceWith(edited);
+    document.querySelector('h2').textContent = 'New Entry';
+    data.editing = null;
+  }
   $entryImage.setAttribute('src', 'images/placeholder-image-square.jpg');
   $form.reset();
-  $list.prepend(renderEntry(userValues));
   viewSwap('entries');
-  if ($list.children.length === 1) {
-    toggleNoEntries();
-  }
 }
 
 function renderEntry(entry) {
