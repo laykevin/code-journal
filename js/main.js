@@ -123,10 +123,6 @@ $list.addEventListener('click', function (event) {
     for (var o = 0; o < data.entries.length; o++) {
       if (data.entries[o].entryId.toString() === event.target.closest('[data-entry-id]').getAttribute('data-entry-id')) {
         data.editing = data.entries[o];
-
-        // console.log(data.entries[o].entryId.toString(), event.target.closest('[data-entry-id]').getAttribute('data-entry-id'));
-        // console.log(data.editing);
-
       }
     }
     $inputTitle.value = data.editing.title;
@@ -135,9 +131,4 @@ $list.addEventListener('click', function (event) {
     $inputNotes.value = data.editing.notes;
     document.querySelector('h2').textContent = 'Edit Entry';
   }
-  // console.log(data.entries[3].entryId.toString());
-  // // var $liId = event.target.closest('[data-entry-id]');
-  // // console.log($liId);
-  // // console.log($liId.getAttribute('data-entry-id'));
-  // console.log(event.target.closest('[data-entry-id]').getAttribute('data-entry-id'));
 });
