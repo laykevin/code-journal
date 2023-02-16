@@ -135,3 +135,14 @@ $list.addEventListener('click', function (event) {
     $deleteButton.className = '';
   }
 });
+var $modal = document.querySelector('#modal');
+$deleteButton.addEventListener('click', modal);
+function modal(event) {
+  event.preventDefault();
+  $modal.className = '';
+}
+
+var $cancelButton = document.querySelector('#cancel-button');
+$cancelButton.addEventListener('click', function (event) {
+  $modal.className = 'hidden';
+});
